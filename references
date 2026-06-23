@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.auth-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 100%;
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 420px;
+}
+
+.btn {
+  flex: 1 1 160px; /* grow, shrink, basis - KEY for responsive */
+  max-width: 180px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Ensure clean stack on tiny screens */
+@media (max-width: 400px) {
+  .auth-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn {
+    flex: none;
+    max-width: none;
+  }
+}
+</style>
+</head>
+<body>
+<div class="auth-buttons">
+  <button class="btn login-btn">Log In</button>
+  <button class="btn signup-btn">Sign Up</button>
+</div>
+</body>
+</html>
